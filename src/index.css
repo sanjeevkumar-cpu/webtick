@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark theme inspired by the logo */
+    --background: 210 11% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 210 11% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 210 11% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* WebTick blue primary */
+    --primary: 199 89% 48%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 199 89% 60%;
+
+    --secondary: 210 11% 15%;
+    --secondary-foreground: 210 40% 85%;
+
+    --muted: 210 11% 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 210 11% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 11% 20%;
+    --input: 210 11% 15%;
+    --ring: 199 89% 48%;
+
+    /* Gradients for beautiful effects */
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%), hsl(199 89% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 11% 7%) 0%, hsl(210 11% 12%) 50%, hsl(210 11% 7%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(199 89% 48% / 0.3) 0%, transparent 70%);
+    
+    /* Shadows with brand colors */
+    --shadow-primary: 0 10px 30px -10px hsl(199 89% 48% / 0.4);
+    --shadow-glow: 0 0 60px hsl(199 89% 48% / 0.3);
+    --shadow-card: 0 8px 32px hsl(210 11% 4% / 0.4);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep same dark theme - we're already dark */
+    --background: 210 11% 7%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
